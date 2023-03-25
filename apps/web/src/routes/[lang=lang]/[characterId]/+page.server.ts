@@ -3,8 +3,8 @@ import type { PageServerLoad } from './$types';
 import type { Actions } from './$types';
 import { PAYLOAD_API_KEY } from '$env/static/private';
 
-// const CMS_URL = 'https://payload-character-sheet-production.up.railway.app';
-const CMS_URL = 'http://localhost:3002';
+const CMS_URL = 'https://payload-character-sheet-production.up.railway.app';
+// const CMS_URL = 'http://localhost:3002';
 
 export const load = (async ({ fetch, params }) => {
 	// TODO: Character ID from URL
