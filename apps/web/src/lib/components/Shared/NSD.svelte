@@ -3,9 +3,12 @@
 	import Modal from './Modal.svelte';
 	import { Slate, Editable, withSvelte } from 'svelte-slate';
 	import { createEditor } from 'slate';
+	import { toInitialCase } from '$lib/utils';
 	const editor = withSvelte(createEditor());
 
-	export let NSD: FifthEditionCharacter['combat']['abilities'][0];
+	export let NSD: FifthEditionCharacter['combat']['abilities'][0] & {
+		school?: FifthEditionCharacter['combat']['spells'][0]['school'];
+	};
 	let value = NSD.description;
 </script>
 
@@ -14,6 +17,11 @@
 	<span slot="trigger" class="inline-flex flex-wrap py-1 text-sm cursor-pointer">
 		{#if NSD?.name}
 			<h4 class="mr-1">{NSD.name}</h4>
+		{/if}
+		{#if NSD?.school}
+			[
+			<i class="text-c-caption-gray">{toInitialCase(NSD.school)}</i>
+			]
 		{/if}
 		{#if NSD?.detail}
 			<p class="text-c-gold">({NSD.detail}) -</p>

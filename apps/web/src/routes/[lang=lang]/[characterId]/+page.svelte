@@ -6,6 +6,7 @@
 	import SkillsCard from '$lib/components/Cards/SkillsCard/SkillsCard.svelte';
 	import VisualAppearanceCard from '$lib/components/Cards/VisualAppearanceCard.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
+	import SpellsCard from '$lib/components/Cards/SpellsCard.svelte';
 	import type { FifthEditionCharacter } from '../../../../../../packages/types/payload-types';
 	const delayFactor = 30;
 
@@ -23,6 +24,7 @@
 	<AbilityScoresCard {character} delay={4 * delayFactor} />
 	<SkillsCard {character} delay={5 * delayFactor} />
 	<JournalCard {character} delay={6 * delayFactor} />
+	<SpellsCard {character} delay={7 * delayFactor} />
 </div>
 
 <Footer />

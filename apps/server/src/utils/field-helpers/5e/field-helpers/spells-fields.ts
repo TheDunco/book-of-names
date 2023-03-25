@@ -18,6 +18,7 @@ export const spellsFields: Field[] = [
                             {
                                 type: 'select',
                                 name: 'spellSlotLevel',
+                                required: true,
                                 options: [
                                     option('Cantrip'),
                                     option('1st'),

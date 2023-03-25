@@ -13,7 +13,7 @@
 		{#each chapters as chapter (chapter.id)}
 			<div class="mb-8">
 				{#if chapter.name}
-					<h3 class="font-raleway text-c-caption-gray text-base">{chapter.name}</h3>
+					<h3 class="font-raleway text-c-caption-gray">{chapter.name}</h3>
 				{/if}
 				<div class="flex flex-col w-full p-5 rounded-standard bg-c-card-light dark:bg-c-dark-gray">
 					{#if chapter.journalEntries.length}
