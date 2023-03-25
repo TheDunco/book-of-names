@@ -40,7 +40,7 @@
 					leaveTo="opacity-0 scale-95"
 				>
 					<div
-						class="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-c-near-white p-5 text-left align-middle shadow-xl transition-all"
+						class="w-full max-w-3xl transform overflow-hidden rounded-2xl dark:bg-c-dark-gray bg-c-near-white p-8 text-left align-middle shadow-xl transition-all"
 						use:dialog.modal
 					>
 						<slot name="content" />
