@@ -6,7 +6,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div on:click={dialog.open}>
+<div class="h-full" on:click={dialog.open}>
 	<slot name="trigger" class={$dialog.expanded ? '' : 'opacity-30'} />
 </div>
 

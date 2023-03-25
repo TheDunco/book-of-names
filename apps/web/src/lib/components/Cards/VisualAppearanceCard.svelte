@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { FifthEditionCharacter } from '../../../../../../packages/types/payload-types';
 	import { guardValue } from '$lib/utils';
-	import Card from '../Shared/Card.svelte';
+	import Card from '../Shared/Card/Card.svelte';
 	import LabelValue from '../Shared/LabelValue.svelte';
 
 	export let character: FifthEditionCharacter;

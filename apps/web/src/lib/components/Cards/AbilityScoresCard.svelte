@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { FifthEditionCharacter } from '../../../../../../packages/types/payload-types';
-	import Card from '../Shared/Card.svelte';
+	import Card from '../Shared/Card/Card.svelte';
 	import ModifierView from '../Shared/ModifierView.svelte';
 	import clsx from 'clsx';
 
