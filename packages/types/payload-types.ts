@@ -381,6 +381,7 @@ export interface FifthEditionCharacter {
     }[];
     spells: {
       name?: string;
+      detail?: string;
       summary?: string;
       description?: {
         [k: string]: unknown;
@@ -402,6 +403,7 @@ export interface FifthEditionCharacter {
     }[];
     actions: {
       name?: string;
+      detail?: string;
       summary?: string;
       description?: {
         [k: string]: unknown;
@@ -450,6 +452,7 @@ export interface FifthEditionCharacter {
     }[];
     abilities: {
       name?: string;
+      detail?: string;
       summary?: string;
       description?: {
         [k: string]: unknown;
@@ -505,6 +508,7 @@ export interface FifthEditionCharacter {
   }[];
   trackables: {
     name?: string;
+    detail?: string;
     summary?: string;
     description?: {
       [k: string]: unknown;
@@ -516,37 +520,20 @@ export interface FifthEditionCharacter {
     resetsOnLongRest?: boolean;
     id?: string;
   }[];
-  quests: {
-    questName?: string;
-    questSummary?: string;
-    questDescription?: {
-      [k: string]: unknown;
+  journalChapters: {
+    name?: string;
+    journalEntries: {
+      pictures?: string[] | Media[];
+      name?: string;
+      detail?: string;
+      summary?: string;
+      description?: {
+        [k: string]: unknown;
+      }[];
+      id?: string;
     }[];
-  };
-  npcs: {
-    npcName?: string;
-    npcSummary?: string;
-    npcDescription?: {
-      [k: string]: unknown;
-    }[];
-    pictures?: string[] | Media[];
-  };
-  locations: {
-    npcName?: string;
-    npcSummary?: string;
-    npcDescription?: {
-      [k: string]: unknown;
-    }[];
-  };
-  companionsAndMounts: {
-    npcName?: string;
-    npcSummary?: string;
-    npcDescription?: {
-      [k: string]: unknown;
-    }[];
-    pictures?: string[] | Media[];
-  };
-  notes?: string[] | Note[];
+    id?: string;
+  }[];
   createdAt: string;
   updatedAt: string;
 }
@@ -586,63 +573,6 @@ export interface Media {
   };
   createdAt: string;
   updatedAt: string;
-}
-export interface Note {
-  id: string;
-  name: string;
-  note?: {
-    [k: string]: unknown;
-  }[];
-  media?: string[] | Media[];
-  campaign?: string | Campaign;
-  character?: string[] | FifthEditionCharacter[];
-  creator?: string | User;
-  createdAt: string;
-  updatedAt: string;
-}
-export interface Campaign {
-  id: string;
-  name: string;
-  players?: string[] | User[];
-  characters?:
-    | (
-        | {
-            value: string;
-            relationTo: 'fifth-edition-character';
-          }
-        | {
-            value: string;
-            relationTo: 'kids-on-brooms-character';
-          }
-      )[]
-    | (
-        | {
-            value: FifthEditionCharacter;
-            relationTo: 'fifth-edition-character';
-          }
-        | {
-            value: KidsOnBroomsCharacter;
-            relationTo: 'kids-on-brooms-character';
-          }
-      )[];
-  media?: string[] | Media[];
-  notes?: string[] | Note[];
-  createdAt: string;
-  updatedAt: string;
-}
-export interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
-  roles?: ('admin' | 'player' | 'dm')[];
-  email?: string;
-  resetPasswordToken?: string;
-  resetPasswordExpiration?: string;
-  loginAttempts?: number;
-  lockUntil?: string;
-  createdAt: string;
-  updatedAt: string;
-  password?: string;
 }
 export interface KidsOnBroomsCharacter {
   id: string;
@@ -714,6 +644,63 @@ export interface KidsOnBroomsCharacter {
       id?: string;
     }[];
   };
+  createdAt: string;
+  updatedAt: string;
+}
+export interface Campaign {
+  id: string;
+  name: string;
+  players?: string[] | User[];
+  characters?:
+    | (
+        | {
+            value: string;
+            relationTo: 'fifth-edition-character';
+          }
+        | {
+            value: string;
+            relationTo: 'kids-on-brooms-character';
+          }
+      )[]
+    | (
+        | {
+            value: FifthEditionCharacter;
+            relationTo: 'fifth-edition-character';
+          }
+        | {
+            value: KidsOnBroomsCharacter;
+            relationTo: 'kids-on-brooms-character';
+          }
+      )[];
+  media?: string[] | Media[];
+  notes?: string[] | Note[];
+  createdAt: string;
+  updatedAt: string;
+}
+export interface User {
+  id: string;
+  firstName: string;
+  lastName: string;
+  roles?: ('admin' | 'player' | 'dm')[];
+  email?: string;
+  resetPasswordToken?: string;
+  resetPasswordExpiration?: string;
+  loginAttempts?: number;
+  lockUntil?: string;
+  createdAt: string;
+  updatedAt: string;
+  password?: string;
+}
+export interface Note {
+  id: string;
+  name: string;
+  note?: {
+    [k: string]: unknown;
+  }[];
+  media?: string[] | Media[];
+  campaign?: string | Campaign;
+  character?: string[] | FifthEditionCharacter[];
+  creator?: string | User;
   createdAt: string;
   updatedAt: string;
 }

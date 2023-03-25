@@ -4,7 +4,7 @@ import { abilityScoresAndSkillsTab } from '../utils/field-helpers/5e/tabs/abilit
 import { characterTab } from '../utils/field-helpers/5e/tabs/character-tab';
 import { combatTab } from '../utils/field-helpers/5e/tabs/combat-tab';
 import { equipmentTab } from '../utils/field-helpers/5e/tabs/equipment-tab';
-import { journalTab } from '../utils/field-helpers/5e/tabs/notes-tab';
+import { journalTab } from '../utils/field-helpers/5e/tabs/journal-tab';
 import { trackablesTab } from '../utils/field-helpers/5e/tabs/trackables-tab';
 
 // Example Collection - For reference only, this must be added to payload.config.ts to be used.

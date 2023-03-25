@@ -27,16 +27,15 @@
 			'z-50 scale-125 drop-shadow-2xl': zoom
 		})}
 		on:dblclick={toggleZoom}
-		on:keydown={toggleZoom}
 	>
 		{#if title}
 			<h2
-				class="flex w-full items-center justify-center pt-4 align-middle font-cuprum text-2xl text-c-caption-gray"
+				class="flex w-full items-center select-none justify-center pt-4 align-middle font-cuprum text-2xl text-c-caption-gray"
 			>
 				{title}
 			</h2>
 		{/if}
-		<div class="p-4 md:p-8">
+		<div class="px-4 pb-4 pt-2 md:px-8 md:pb-8">
 			<slot />
 		</div>
 	</div>

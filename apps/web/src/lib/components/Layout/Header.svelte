@@ -5,7 +5,7 @@
 	import Logo from '$lib/components/Shared/Logo.svelte';
 </script>
 
-<header class="fixed top-0 z-50 h-24 w-full bg-c-gold drop-shadow-md">
+<header class="fixed top-0 z-20 h-24 w-full bg-c-gold drop-shadow-md">
 	<div class="flex h-full w-full flex-row items-center justify-between p-4 align-middle">
 		<a href="/{$locale}">
 			<Logo />

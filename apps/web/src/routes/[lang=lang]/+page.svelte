@@ -28,7 +28,7 @@
 	{#each characters as char, i}
 		<a
 			href={`/en/${char.id}`}
-			class="m-4 rounded-standard border-c-gold transition-[ring-width_0.1s_ease_in_out] hover:ring hover:ring-c-gold hover:drop-shadow-lg"
+			class="m-4 rounded-standard h-fit border-c-gold transition-[ring-width_0.1s_ease_in_out] hover:ring hover:ring-c-gold hover:drop-shadow-lg"
 		>
 			<GeneralSummaryCard detail={false} removeMargin={true} delay={i * 15} character={char} />
 		</a>

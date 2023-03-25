@@ -18,5 +18,10 @@
     {
       "path": "packages/replacer"
     }
-  ]
+  ],
+  "settings": {
+    "cSpell.words": [
+      "trackables"
+    ]
+  }
 }

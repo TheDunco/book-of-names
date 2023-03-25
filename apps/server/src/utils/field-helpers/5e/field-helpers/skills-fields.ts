@@ -1,5 +1,4 @@
 import { Field } from 'payload/types';
-import { getNSDFields } from './get-nsd-fields';
 
 const skill = (name: string, label?: string): Field[] => [
     {

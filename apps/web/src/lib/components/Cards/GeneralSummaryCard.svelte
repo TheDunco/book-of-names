@@ -16,7 +16,7 @@
 </script>
 
 <Card title={undefined} {removeMargin} {delay}>
-	<div class="flex flex-col gap-2">
+	<div class="flex flex-col mt-4 gap-2">
 		<span class="text-4xl">
 			{character.name}
 			<span class="font-raleway text-base text-c-caption-gray">

@@ -2,6 +2,7 @@
 	import AbilityScoresCard from '$lib/components/Cards/AbilityScoresCard.svelte';
 	import BackgroundAndClassCard from '$lib/components/Cards/BackgroundAndClassCard.svelte';
 	import GeneralSummaryCard from '$lib/components/Cards/GeneralSummaryCard.svelte';
+	import JournalCard from '$lib/components/Cards/JournalCard.svelte';
 	import SkillsCard from '$lib/components/Cards/SkillsCard/SkillsCard.svelte';
 	import VisualAppearanceCard from '$lib/components/Cards/VisualAppearanceCard.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
@@ -21,6 +22,7 @@
 	<BackgroundAndClassCard {character} delay={3 * delayFactor} />
 	<AbilityScoresCard {character} delay={4 * delayFactor} />
 	<SkillsCard {character} delay={5 * delayFactor} />
+	<JournalCard {character} delay={6 * delayFactor} />
 </div>
 
 <Footer />
