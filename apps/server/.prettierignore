@@ -1,0 +1,10 @@
+# general
+node_modules
+*.json
+
+# next
+.next
+public
+
+# jest/testing lib
+*.snap

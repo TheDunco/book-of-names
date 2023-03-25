@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
-    <meta name="viewport" content="width=device-width" />
-    %sveltekit.head%
-  </head>
-  <body>
-    <div style="display: contents">%sveltekit.body%</div>
-  </body>
+<html lang="en" data-theme="" style="color-scheme: normal">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cuprum:ital@0;1&family=Fira+Mono&family=Fira+Sans:ital@0;1&family=Raleway:ital@0;1&display=swap"
+		rel="stylesheet">
+	%sveltekit.head%
+</head>
+
+<body
+	class="subpixel-antialiased font-fira bg-c-background-light dark:bg-c-dark-gray scroll-smooth text-c-dark-gray transition-all duration-100 ease-in-out dark:text-c-background-light"
+	data-sveltekit-preload-data="hover">
+	<div style="display: contents;">%sveltekit.body%</div>
+</body>
+
 </html>

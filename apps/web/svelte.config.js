@@ -1,18 +1,18 @@
-import adapter from "@sveltejs/adapter-node";
-import { vitePreprocess } from "@sveltejs/kit/vite";
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  // Consult https://kit.svelte.dev/docs/integrations#preprocessors
-  // for more information about preprocessors
-  preprocess: vitePreprocess(),
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: [vitePreprocess()],
 
-  kit: {
-    adapter: adapter({
-      out: "../server/dist/web",
-      precompress: true,
-    }),
-  },
+	kit: {
+		adapter: adapter(),
+		alias: {
+			$i18n: 'src/i18n'
+		}
+	}
 };
 
 export default config;

@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "strict": false,
     "esModuleInterop": true,
@@ -9,17 +13,24 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "jsx": "react",
-    "importsNotUsedAsValues": "error",
-    "moduleResolution": "node",
     "paths": {
-      "payload/generated-types": ["./src/payload-types.ts"]
+      "payload/generated-types": [
+        "./src/payload-types.ts",
+      ],
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "build"],
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "src/hooks",
+    "src/plugins",
+  ],
   "ts-node": {
     "transpileOnly": true,
     "swc": true,
-    "esm": true
   }
 }

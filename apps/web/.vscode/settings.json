@@ -1,3 +1,3 @@
 {
-  "workbench.tree.indent": 12
+    "dotenv.enableAutocloaking": true
 }

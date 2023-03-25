@@ -6,8 +6,5 @@ node_modules
 .env
 .env.*
 !.env.example
-
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-/misc
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
