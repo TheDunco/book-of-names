@@ -2,6 +2,7 @@
 	import AbilityScoresCard from '$lib/components/Cards/AbilityScoresCard.svelte';
 	import BackgroundAndClassCard from '$lib/components/Cards/BackgroundAndClassCard.svelte';
 	import GeneralSummaryCard from '$lib/components/Cards/GeneralSummaryCard.svelte';
+	import SkillsCard from '$lib/components/Cards/SkillsCard/SkillsCard.svelte';
 	import VisualAppearanceCard from '$lib/components/Cards/VisualAppearanceCard.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import type { FifthEditionCharacter } from '$lib/types/payload-types';
@@ -19,6 +20,7 @@
 	<VisualAppearanceCard {character} delay={2 * delayFactor} />
 	<BackgroundAndClassCard {character} delay={3 * delayFactor} />
 	<AbilityScoresCard {character} delay={4 * delayFactor} />
+	<SkillsCard {character} delay={5 * delayFactor} />
 </div>
 
 <Footer />
