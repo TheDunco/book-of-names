@@ -19,19 +19,19 @@
 			<p class="text-c-gold">({NSD.detail}) -</p>
 		{/if}
 		{#if NSD?.summary}
-			<p class="text-c-caption-gray">&nbsp;{NSD.summary}</p>
+			<p class="text-c-caption-gray">{NSD?.detail ? '\xa0' : ' - '}{NSD.summary}</p>
 		{/if}
 	</span>
 	<div slot="content">
-		<div class="inline-flex text-2xl mb-5">
+		<div class="inline-flex flex-wrap text-2xl mb-5">
 			{#if NSD?.name}
 				<h4 class="mr-1">{NSD.name}</h4>
 			{/if}
 			{#if NSD?.detail}
-				<p class="text-c-gold">({NSD.detail}) -</p>
+				<p class="text-c-gold">&nbsp;({NSD.detail}) -</p>
 			{/if}
 			{#if NSD?.summary}
-				<p class="text-c-caption-gray">&nbsp;{NSD.summary}</p>
+				<p class="text-c-caption-gray">{NSD?.detail ? '\xa0' : '\xa0-\xa0'}{NSD.summary}</p>
 			{/if}
 		</div>
 		<div class="border-l-2 border-c-gold pl-3">

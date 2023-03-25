@@ -22,11 +22,9 @@
 		>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				class="fixed inset-0 items-center justify-center backdrop-blur-sm bg-black bg-opacity-25"
+				class="fixed inset-0 items-center justify-center backdrop-blur-sm bg-c-near-black bg-opacity-25"
 				on:click={dialog.close}
-			>
-				Close
-			</div>
+			/>
 		</Transition>
 
 		<div class="fixed inset-0 overflow-y-auto">
@@ -40,7 +38,7 @@
 					leaveTo="opacity-0 scale-95"
 				>
 					<div
-						class="w-full max-w-3xl transform overflow-hidden rounded-2xl dark:bg-c-dark-gray bg-c-near-white p-8 text-left align-middle shadow-xl transition-all"
+						class="w-full z-50 max-w-3xl transform overflow-hidden rounded-2xl dark:bg-c-dark-gray bg-c-near-white p-8 text-left align-middle shadow-xl transition-all"
 						use:dialog.modal
 					>
 						<slot name="content" />
