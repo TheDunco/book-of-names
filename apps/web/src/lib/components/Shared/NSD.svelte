@@ -1,21 +1,17 @@
 <script lang="ts">
 	import type { FifthEditionCharacter } from '../../../../../../packages/types/payload-types';
 	import Modal from './Modal.svelte';
+	import { Slate, Editable, withSvelte } from 'svelte-slate';
+	import { createEditor } from 'slate';
+	const editor = withSvelte(createEditor());
 
 	export let NSD: FifthEditionCharacter['combat']['abilities'][0];
-	let showDescription = false;
-	const showDescriptionModal = () => {
-		showDescription = true;
-	};
+	let value = NSD.description;
 </script>
 
 <Modal>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<span
-		slot="trigger"
-		class="inline-flex flex-wrap py-1 text-sm cursor-pointer"
-		on:click={showDescriptionModal}
-	>
+	<span slot="trigger" class="inline-flex flex-wrap py-1 text-sm cursor-pointer">
 		{#if NSD?.name}
 			<h4 class="mr-1">{NSD.name}</h4>
 		{/if}
@@ -40,7 +36,9 @@
 		</div>
 		<div class="border-l-2 border-c-gold pl-3">
 			{#if NSD?.description}
-				<p>{NSD.description}</p>
+				<Slate {editor} bind:value>
+					<Editable placeholder="Enter some plain text..." />
+				</Slate>
 			{/if}
 		</div>
 	</div>

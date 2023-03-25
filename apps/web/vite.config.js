@@ -20,6 +20,9 @@ const config = {
 	],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	optimizeDeps: {
+		exclude: ['svelte-slate']
 	}
 };
 
