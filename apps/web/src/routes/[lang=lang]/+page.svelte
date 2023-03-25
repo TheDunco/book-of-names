@@ -1,7 +1,7 @@
 <script lang="ts">
 	import GeneralSummaryCard from '$lib/components/Cards/GeneralSummaryCard.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
-	import type { FifthEditionCharacter } from '$lib/types/payload-types';
+	import type { FifthEditionCharacter } from '../../../../../packages/types/payload-types';
 
 	export let data;
 

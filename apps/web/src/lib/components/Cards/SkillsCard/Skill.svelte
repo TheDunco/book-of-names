@@ -1,14 +1,17 @@
 <script lang="ts">
 	import ModifierView from '$lib/components/Shared/ModifierView.svelte';
+	import MultiCheckbox from '$lib/components/Shared/MultiCheckbox/MultiCheckbox.svelte';
+	import type { FifthEditionCharacter } from '../../../../../../../packages/types/payload-types';
 
-	export let mod = 0;
-	export let name = '';
+	export let skill: FifthEditionCharacter['AbilityScoresAndSkills']['skills']['acrobatics'];
+	export let name: string;
+	console.log(`%c[Skill.svelte] skill :>> ${skill}`, 'color:red', skill);
 </script>
 
 <div>
 	<div class="font-raleway text-xs text-c-caption-gray">{name}</div>
 	<div class="inline-flex items-center space-x-2">
-		<div class="rounded-md bg-c-light-gray h-5 w-5" />
-		<ModifierView modifier={mod} />
+		<MultiCheckbox {skill} />
+		<ModifierView modifier={skill.bonus || 0} />
 	</div>
 </div>

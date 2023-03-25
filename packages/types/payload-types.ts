@@ -342,7 +342,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      strength: {
+      athletics: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;

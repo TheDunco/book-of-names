@@ -5,7 +5,7 @@
 	import SkillsCard from '$lib/components/Cards/SkillsCard/SkillsCard.svelte';
 	import VisualAppearanceCard from '$lib/components/Cards/VisualAppearanceCard.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
-	import type { FifthEditionCharacter } from '$lib/types/payload-types';
+	import type { FifthEditionCharacter } from '../../../../../../packages/types/payload-types';
 	const delayFactor = 30;
 
 	export let data;

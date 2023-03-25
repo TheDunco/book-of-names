@@ -10,8 +10,6 @@ const skill = (name: string, label?: string): Field[] => [
                 type: 'group',
                 name: name.slice(0, 1).toLowerCase() + name.slice(1),
                 fields: [
-                    ...getNSDFields(name),
-
                     //TODO: Validate that only one of these is checked
                     {
                         type: 'row',
@@ -67,37 +65,26 @@ const skill = (name: string, label?: string): Field[] => [
 export const skillsFields: Field[] = [
     {
         type: 'group',
-        name: 'intelligenceSkills',
+        name: 'skills',
         fields: [
             ...skill('Arcana'),
             ...skill('History'),
             ...skill('Investigation'),
             ...skill('Nature'),
             ...skill('Religion'),
-        ],
-    },
-
-    {
-        type: 'group',
-        name: 'wisdomSkills',
-        fields: [
             ...skill('AnimalHandling', 'Animal Handling'),
             ...skill('Insight'),
             ...skill('Medicine'),
             ...skill('Perception'),
             ...skill('Survival'),
+            ...skill('Deception'),
+            ...skill('Intimidation'),
+            ...skill('Performance'),
+            ...skill('Persuasion'),
+            ...skill('Acrobatics'),
+            ...skill('SleightOfHand', 'Sleight of Hand'),
+            ...skill('Stealth'),
+            ...skill('Athletics'),
         ],
-    },
-
-    {
-        type: 'group',
-        name: 'charismaSkills',
-        fields: [...skill('Deception'), ...skill('Intimidation'), ...skill('Performance'), ...skill('Persuasion')],
-    },
-
-    {
-        type: 'group',
-        name: 'dexteritySkills',
-        fields: [...skill('Acrobatics'), ...skill('SleightOfHand', 'Sleight of Hand'), ...skill('Stealth')],
     },
 ];
