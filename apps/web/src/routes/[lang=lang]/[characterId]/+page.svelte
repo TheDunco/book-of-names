@@ -16,7 +16,7 @@
 </script>
 
 <div
-	class="mx-auto max-w-7xl px-2 transition-all duration-300 ease-in-out md:px-4 lg:grid lg:grid-cols-2 xl:px-0"
+	class="mx-auto max-w-7xl px-4 transition-all duration-300 ease-in-out md:px-6 lg:grid lg:grid-cols-2 xl:px-0"
 >
 	<GeneralSummaryCard {character} delay={delayFactor} />
 	<VisualAppearanceCard {character} delay={2 * delayFactor} />

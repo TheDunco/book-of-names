@@ -9,7 +9,7 @@
 </script>
 
 <h1
-	class="bold mb-6 cursor-default text-center font-cuprum text-6xl text-c-gold hover:-skew-x-2 hover:before:content-['['] hover:after:content-[']']"
+	class="bold mb-6 max-w-sm mx-auto cursor-default text-center font-cuprum text-6xl text-c-gold hover:-skew-x-2 hover:before:content-['['] hover:after:content-[']']"
 	on:click={() => {
 		window.location.reload();
 	}}
@@ -23,7 +23,7 @@
 </h1>
 
 <div
-	class="mx-auto max-w-7xl px-2 transition-all duration-100 ease-in-out md:px-4 lg:grid lg:grid-cols-2 xl:px-0"
+	class="mx-auto max-w-7xl px-4 transition-all duration-100 ease-in-out md:px-6 lg:grid lg:grid-cols-2 xl:px-0"
 >
 	{#each characters as char, i}
 		<a

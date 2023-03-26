@@ -9,21 +9,27 @@
 </script>
 
 <Card title="Journal" {delay}>
-	{#if chapters?.length}
-		{#each chapters as chapter (chapter.id)}
-			<div class="mb-8">
-				{#if chapter.name}
-					<h3 class="font-raleway text-c-caption-gray">{chapter.name}</h3>
-				{/if}
-				<div class="flex flex-col w-full p-5 rounded-standard bg-c-card-light dark:bg-c-dark-gray">
-					{#if chapter.journalEntries.length}
-						{#each chapter.journalEntries as entry (entry.id)}
-							<Nsd NSD={entry} />
-						{/each}
+	<div class="overflow-auto">
+		{#if chapters?.length}
+			{#each chapters as chapter (chapter.id)}
+				<div class="mb-8">
+					{#if chapter.name}
+						<h3 class="font-raleway text-c-caption-gray">{chapter.name}</h3>
 					{/if}
+					<div
+						class="flex flex-col w-full p-5 rounded-standard bg-c-card-light dark:bg-c-dark-gray"
+					>
+						{#if chapter.journalEntries.length}
+							{#each chapter.journalEntries as entry (entry.id)}
+								<Nsd NSD={entry} />
+							{/each}
+						{/if}
+					</div>
 				</div>
-			</div>
-		{/each}
-		<!-- TODO: Add journal entry button -->
-	{:else}No journal entries{/if}
+			{/each}
+			<!-- TODO: Add journal entry button -->
+		{:else}
+			<i class="text-c-caption-gray"> No journal entries </i>
+		{/if}
+	</div>
 </Card>

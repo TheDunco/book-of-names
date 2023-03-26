@@ -4,8 +4,10 @@
 	import { Slate, Editable, withSvelte } from 'svelte-slate';
 	import { createEditor } from 'slate';
 	import { toInitialCase } from '$lib/utils';
+	import clsx from 'clsx';
 	const editor = withSvelte(createEditor());
 
+	export let fade = false;
 	export let NSD: FifthEditionCharacter['combat']['abilities'][0] & {
 		school?: FifthEditionCharacter['combat']['spells'][0]['school'];
 	};
@@ -14,7 +16,12 @@
 
 <Modal>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<span slot="trigger" class="inline-flex hover:opacity-75 flex-wrap py-1 text-sm cursor-pointer">
+	<span
+		slot="trigger"
+		class={clsx('inline-flex hover:opacity-75 flex-wrap break-words py-1 text-sm cursor-pointer', {
+			'opacity-30': fade
+		})}
+	>
 		{#if NSD?.name}
 			<h4 class="mr-1">{NSD.name}</h4>
 		{/if}
@@ -34,6 +41,11 @@
 		<div class="inline-flex flex-wrap text-2xl mb-5">
 			{#if NSD?.name}
 				<h4 class="mr-1">{NSD.name}</h4>
+			{/if}
+			{#if NSD?.school}
+				<div class="text-c-caption-gray">
+					[<i>{toInitialCase(NSD.school)}</i>]&nbsp;
+				</div>
 			{/if}
 			{#if NSD?.detail}
 				<p class="text-c-gold">&nbsp;({NSD.detail}) -</p>

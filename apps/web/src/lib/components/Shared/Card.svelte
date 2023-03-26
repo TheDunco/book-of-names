@@ -22,10 +22,13 @@
 {:else}
 	<div
 		in:fly={{ duration: 300, x: 200, easing, delay }}
-		class={clsx('rounded-standard bg-c-near-white dark:bg-c-near-black', {
-			'm-2 md:m-4': !removeMargin,
-			'z-50 scale-125 drop-shadow-2xl': zoom
-		})}
+		class={clsx(
+			'rounded-standard max-h-[500px] overflow-y-auto bg-c-near-white dark:bg-c-near-black',
+			{
+				'm-2 md:m-4': !removeMargin,
+				'z-50 scale-125 drop-shadow-2xl': zoom
+			}
+		)}
 		on:dblclick={toggleZoom}
 	>
 		{#if title}
