@@ -15,7 +15,6 @@
 	export let data;
 
 	const character: FifthEditionCharacter = data.props?.character;
-	localStorage.setItem('character', JSON.stringify(character));
 
 	const showSpells =
 		character.combat.spells?.length > 0 ??
