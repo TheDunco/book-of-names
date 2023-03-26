@@ -17,7 +17,7 @@ export const FifthEditionCharacter: CollectionConfig = {
 
     admin: {
         useAsTitle: 'name',
-        defaultColumns: ['name', 'level', 'users'],
+        defaultColumns: ['name', 'id', 'updatedAt', 'createdAt'],
     },
 
     access: {

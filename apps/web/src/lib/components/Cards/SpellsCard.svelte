@@ -11,7 +11,7 @@
 	const spellSlots = character.combat.spellSlots;
 
 	const preparedSpellsCount = spells.filter((spell) => spell.prepared).length;
-	const spellSaveDC = character.combat.proficiency[0].saveDC;
+	const spellSaveDC = character.combat.proficiency[0]?.saveDC;
 
 	const slotToArray = (slot: FifthEditionCharacter['combat']['spellSlots'][0]) => {
 		const arr = [];

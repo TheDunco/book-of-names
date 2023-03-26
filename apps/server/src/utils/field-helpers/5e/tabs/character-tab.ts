@@ -59,6 +59,11 @@ export const characterTab: Tab = {
                     type: 'number',
                     name: 'swimSpeed',
                 },
+
+                {
+                    type: 'text',
+                    name: 'darkvision',
+                },
             ],
         },
 

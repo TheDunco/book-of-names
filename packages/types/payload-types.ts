@@ -360,7 +360,8 @@ export interface FifthEditionCharacter {
       hitDice: {
         dieType?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         currentHitDice?: number;
-      };
+        id?: string;
+      }[];
       deathSaves: {
         deathSavesSuccesses?: number;
         deathSavesFailures?: number;

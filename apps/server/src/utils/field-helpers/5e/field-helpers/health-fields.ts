@@ -34,13 +34,14 @@ export const healthFields: Field[] = [
                         ],
                     },
 
+                    //TODO: Tie this into level(s) somehow
                     {
-                        type: 'group',
-                        name: 'hitDice',
+                        type: 'collapsible',
+                        label: 'Hit Dice',
                         fields: [
                             {
-                                type: 'collapsible',
-                                label: 'Hit Dice',
+                                type: 'array',
+                                name: 'hitDice',
                                 fields: [
                                     {
                                         type: 'select',
@@ -55,7 +56,6 @@ export const healthFields: Field[] = [
                                         ],
                                     },
 
-                                    // TODO: Max value should be level
                                     {
                                         type: 'number',
                                         name: 'currentHitDice',
