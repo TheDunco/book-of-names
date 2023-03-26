@@ -16,9 +16,9 @@
 </script>
 
 <Card title="Ability Scores" {delay}>
-	<div class="mx-auto grid w-full gap-4 2xs:grid-cols-2 sm:grid-cols-3 sm:gap-12">
+	<div class="mx-auto mt-5 grid w-full gap-4 2xs:grid-cols-2 sm:grid-cols-3 sm:gap-12">
 		<div class="mx-auto">
-			<div class="w-28 text-center font-raleway text-xs text-c-caption-gray">Intelligence</div>
+			<div class="w-28 text-center font-raleway text-c-caption-gray">Intelligence</div>
 			<div
 				class="mt-1 flex h-32 w-28 flex-col justify-around rounded-standard bg-c-card-light p-3 dark:bg-c-dark-gray"
 			>
@@ -50,7 +50,7 @@
 		</div>
 
 		<div class="mx-auto">
-			<div class="w-28 text-center font-raleway text-xs text-c-caption-gray">Wisdom</div>
+			<div class="w-28 text-center font-raleway text-c-caption-gray">Wisdom</div>
 			<div
 				class="mt-1 flex h-32 w-28 flex-col justify-around rounded-standard bg-c-card-light p-3 dark:bg-c-dark-gray"
 			>
@@ -82,7 +82,7 @@
 		</div>
 
 		<div class="mx-auto">
-			<div class="w-28 text-center font-raleway text-xs text-c-caption-gray">Charisma</div>
+			<div class="w-28 text-center font-raleway text-c-caption-gray">Charisma</div>
 			<div
 				class="mt-1 flex h-32 w-28 flex-col justify-around rounded-standard bg-c-card-light p-3 dark:bg-c-dark-gray"
 			>
@@ -114,7 +114,7 @@
 		</div>
 
 		<div class="mx-auto">
-			<div class="w-28 text-center font-raleway text-xs text-c-caption-gray">Dexterity</div>
+			<div class="w-28 text-center font-raleway text-c-caption-gray">Dexterity</div>
 			<div
 				class="mt-1 flex h-32 w-28 flex-col justify-around rounded-standard bg-c-card-light p-3 dark:bg-c-dark-gray"
 			>
@@ -146,7 +146,7 @@
 		</div>
 
 		<div class="mx-auto">
-			<div class="w-28 text-center font-raleway text-xs text-c-caption-gray">Strength</div>
+			<div class="w-28 text-center font-raleway text-c-caption-gray">Strength</div>
 			<div
 				class="mt-1 flex h-32 w-28 flex-col justify-around rounded-standard bg-c-card-light p-3 dark:bg-c-dark-gray"
 			>
@@ -178,7 +178,7 @@
 		</div>
 
 		<div class="mx-auto">
-			<div class="w-28 text-center font-raleway text-xs text-c-caption-gray">Constitution</div>
+			<div class="w-28 text-center font-raleway text-c-caption-gray">Constitution</div>
 			<div
 				class="mt-1 flex h-32 w-28 flex-col justify-around rounded-standard bg-c-card-light p-3 dark:bg-c-dark-gray"
 			>

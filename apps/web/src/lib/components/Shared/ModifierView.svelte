@@ -8,6 +8,6 @@
 	{:else if modifier < 0}
 		<span class="text-c-red">-{modifier}</span>
 	{:else}
-		<span>{modifier}</span>
+		<span class="dark:text-c-caption-gray">+{modifier}</span>
 	{/if}
 </div>

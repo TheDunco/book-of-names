@@ -11,7 +11,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$i18n: 'src/i18n',
-			types: '../packages/types'
+			$types: '../packages/types'
 		}
 	}
 };

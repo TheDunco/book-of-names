@@ -1,27 +1,10 @@
 import { Field } from 'payload/types';
+import { getNSDFields } from './get-nsd-fields';
 
 export const featFields: Field[] = [
     {
         type: 'array',
         name: 'feats',
-        fields: [
-            {
-                type: 'text',
-                name: 'featName',
-                label: 'Name',
-            },
-
-            {
-                type: 'text',
-                name: 'featSummary',
-                label: 'Summary',
-            },
-
-            {
-                type: 'textarea',
-                name: 'featDescription',
-                label: 'Description',
-            },
-        ],
+        fields: getNSDFields(),
     },
 ];
