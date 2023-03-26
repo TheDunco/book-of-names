@@ -22,6 +22,7 @@
   "settings": {
     "cSpell.words": [
       "trackables"
-    ]
+    ],
+    "dotenv.enableAutocloaking": false
   }
 }
