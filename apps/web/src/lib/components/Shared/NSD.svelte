@@ -14,7 +14,7 @@
 
 <Modal>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<span slot="trigger" class="inline-flex flex-wrap py-1 text-sm cursor-pointer">
+	<span slot="trigger" class="inline-flex hover:opacity-75 flex-wrap py-1 text-sm cursor-pointer">
 		{#if NSD?.name}
 			<h4 class="mr-1">{NSD.name}</h4>
 		{/if}

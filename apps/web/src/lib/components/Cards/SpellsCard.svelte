@@ -10,6 +10,8 @@
 	const spellSlots = character.combat.spellSlots;
 </script>
 
+<!-- TODO: Add spell slot MultiSelects (really just checkboxes) -->
+<!-- TODO: Add prepared logic and total prepared spells -->
 <Card title="Spells" {delay}>
 	{#each spellSlots as slot, i}
 		<div class="mb-8">
