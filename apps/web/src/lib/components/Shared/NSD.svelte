@@ -19,9 +19,9 @@
 			<h4 class="mr-1">{NSD.name}</h4>
 		{/if}
 		{#if NSD?.school}
-			[
-			<i class="text-c-caption-gray">{toInitialCase(NSD.school)}</i>
-			]
+			<div class="text-c-caption-gray">
+				[<i>{toInitialCase(NSD.school)}</i>]&nbsp;
+			</div>
 		{/if}
 		{#if NSD?.detail}
 			<p class="text-c-gold">({NSD.detail}) -</p>
