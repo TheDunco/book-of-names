@@ -57,10 +57,10 @@
 							</div>
 						</LabelValue>
 						<LabelValue label="Proficiency Bonus">
-							+{guardValue(char.proficiencyBonus)}
+							+{guardValue(char.proficiencyBonus || 2)}
 						</LabelValue>
 						<LabelValue label="XP">
-							{guardValue(char.xp)}
+							{guardValue(char.xp || 0)}
 						</LabelValue>
 						<LabelValue label="AC">
 							{guardValue(char.armorClass || 10)}
@@ -96,7 +96,7 @@
 								</LabelValue>
 							{/if}
 							<LabelValue label="XP">
-								{guardValue(char.xp)}
+								{guardValue(char.xp || 0)}
 							</LabelValue>
 							<LabelValue label="Inspiration">
 								{#if char.inspiration}
@@ -106,7 +106,7 @@
 								{/if}
 							</LabelValue>
 							<LabelValue label="Proficiency Bonus">
-								+{guardValue(char.proficiencyBonus)}
+								+{guardValue(char.proficiencyBonus || 2)}
 							</LabelValue>
 							<LabelValue label="AC">
 								{guardValue(char.armorClass || 10)}
@@ -136,9 +136,9 @@
 								{strength?.strengthScore || 10}<span class="text-sm">ft</span>
 							</LabelValue>
 							<LabelValue label="High Jump">
-								{`${3 + (strength?.strengthModifier || 10)} + ${character.character.height}`}<span
-									class="text-sm">ft</span
-								>
+								{`${3 + (strength?.strengthModifier || 10)} + ${
+									character.character.height || `0'0"`
+								}`}<span class="text-sm">ft</span>
 							</LabelValue>
 						</span>
 					</div>
