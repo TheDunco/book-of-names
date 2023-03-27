@@ -7,7 +7,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div on:click={dialog.open}>
-	<slot name="trigger" class={$dialog.expanded ? '' : 'opacity-30'} />
+	<slot name="trigger" class={$dialog.expanded ? '' : 'opacity-30' + 'cursor-pointer'} />
 </div>
 
 <div class="relative z-10">

@@ -9,13 +9,29 @@
 
 	const spells = character.combat.spells;
 	const spellSlots = character.combat.spellSlots;
+	const spellSaveDC = character?.combat?.proficiency?.[0]?.saveDC;
+	const preparedSpellsCount = spells?.filter((spell) => spell.prepared).length;
 
-	const preparedSpellsCount = spells.filter((spell) => spell.prepared).length;
-	const spellSaveDC = character.combat.proficiency[0]?.saveDC;
+	type SpellSlots = Array<{
+		spellSlotLevel:
+			| 'cantrip'
+			| '1st'
+			| '2nd'
+			| '3rd'
+			| '4th'
+			| '5th'
+			| '6th'
+			| '7th'
+			| '8th'
+			| '9th';
+		currentSpellSlots?: number | undefined;
+		maxSpellSlots?: number | undefined;
+		id?: string | undefined;
+	}>;
 
-	const slotToArray = (slot: FifthEditionCharacter['combat']['spellSlots'][0]) => {
+	const slotToArray = (slot: SpellSlots[0]) => {
 		const arr = [];
-		const max = slot.maxSpellSlots || 0;
+		const max = slot?.maxSpellSlots || 0;
 		for (let i = 0; i < max; i++) {
 			arr.push(i);
 		}
@@ -25,7 +41,7 @@
 
 <!-- TODO: Add slot for actions in NSD and pass it a "Cast" button here -->
 <Card title={`Spells - ${preparedSpellsCount} Prepared`} {delay}>
-	{#each spellSlots as slot, i}
+	{#each spellSlots ?? [] as slot, i}
 		<div class="mb-8">
 			<div class="font-raleway flex flex-row mb-1 justify-between items-end text-c-caption-gray">
 				<h3>
@@ -45,12 +61,12 @@
 						</div>
 					{/if}
 					{#each slotToArray(slot) as _, i}
-						<MultiCheckbox skill={{ proficient: i <= (slot.currentSpellSlots || 0) }} />
+						<MultiCheckbox skill={{ proficient: i <= (slot?.currentSpellSlots ?? 0) }} />
 					{/each}
 				</span>
 			</div>
 			<div class="flex flex-col w-full p-5 rounded-standard bg-c-card-light dark:bg-c-dark-gray">
-				{#each spells as spell}
+				{#each spells ?? [] as spell}
 					{#if spell.level === i}
 						<Nsd NSD={spell} fade={!spell.prepared} />
 					{/if}

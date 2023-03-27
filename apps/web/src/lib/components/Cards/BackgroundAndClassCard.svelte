@@ -6,8 +6,6 @@
 
 	export let character: FifthEditionCharacter;
 	export let delay: number;
-
-	const strength = character.AbilityScoresAndSkills.abilityScores.strength;
 </script>
 
 <Card title="Background & Class" {delay}>
@@ -24,11 +22,12 @@
 					.join(' ')}
 			</LabelValue>
 			<LabelValue label="Class">
-				{#each character.character.classes as indivClass, i}
+				{#each character?.character?.classes ?? [] as indivClass, i}
 					<span>
 						<span class="text-c-gold">{guardValue(indivClass.levels)}</span>
 						{`${guardValue(indivClass.class)}${
-							character.character.classes.length > 1 && i < character.character.classes.length - 1
+							(character?.character?.classes?.length ?? 0) > 1 &&
+							i < (character?.character?.classes?.length ?? 0) - 1
 								? ','
 								: ''
 						}`}

@@ -10,7 +10,7 @@
 </script>
 
 <Card title="Feats" {delay}>
-	{#each feats as feat}
+	{#each feats ?? [] as feat}
 		<Nsd NSD={feat} />
 	{/each}
 </Card>

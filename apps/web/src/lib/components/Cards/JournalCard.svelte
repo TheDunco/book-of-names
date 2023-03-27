@@ -19,7 +19,7 @@
 					<div
 						class="flex flex-col w-full p-5 rounded-standard bg-c-card-light dark:bg-c-dark-gray"
 					>
-						{#if chapter.journalEntries.length}
+						{#if chapter?.journalEntries?.length}
 							{#each chapter.journalEntries as entry (entry.id)}
 								<Nsd NSD={entry} />
 							{/each}

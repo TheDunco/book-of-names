@@ -13,7 +13,8 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"typesafe-i18n": "typesafe-i18n"
+		"typesafe-i18n": "typesafe-i18n",
+		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",

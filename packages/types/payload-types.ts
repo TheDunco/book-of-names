@@ -29,10 +29,11 @@ export interface FifthEditionCharacter {
     speed?: number;
     flySpeed?: number;
     swimSpeed?: number;
+    darkvision?: string;
     inspiration?: boolean;
     race?: string;
     pronouns?: string;
-    classes: {
+    classes?: {
       class?:
         | 'artificer'
         | 'barbarian'
@@ -173,40 +174,40 @@ export interface FifthEditionCharacter {
     proficiencies?: string;
   };
   AbilityScoresAndSkills: {
-    abilityScores: {
-      intelligence: {
+    abilityScores?: {
+      intelligence?: {
         intelligenceScore?: number;
         intelligenceModifier?: number;
         intelligenceSavingThrowProficiency?: boolean;
       };
-      wisdom: {
+      wisdom?: {
         wisdomScore?: number;
         wisdomModifier?: number;
         wisdomSavingThrowProficiency?: boolean;
       };
-      charisma: {
+      charisma?: {
         charismaScore?: number;
         charismaModifier?: number;
         charismaSavingThrowProficiency?: boolean;
       };
-      strength: {
+      strength?: {
         strengthScore?: number;
         strengthModifier?: number;
         strengthSavingThrowProficiency?: boolean;
       };
-      dexterity: {
+      dexterity?: {
         dexterityScore?: number;
         dexterityModifier?: number;
         dexteritySavingThrowProficiency?: boolean;
       };
-      constitution: {
+      constitution?: {
         constitutionScore?: number;
         constitutionModifier?: number;
         constitutionSavingThrowProficiency?: boolean;
       };
     };
-    skills: {
-      arcana: {
+    skills?: {
+      arcana?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -214,7 +215,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      history: {
+      history?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -222,7 +223,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      investigation: {
+      investigation?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -230,7 +231,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      nature: {
+      nature?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -238,7 +239,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      religion: {
+      religion?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -246,7 +247,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      animalHandling: {
+      animalHandling?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -254,7 +255,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      insight: {
+      insight?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -262,7 +263,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      medicine: {
+      medicine?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -270,7 +271,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      perception: {
+      perception?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -278,7 +279,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      survival: {
+      survival?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -286,7 +287,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      deception: {
+      deception?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -294,7 +295,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      intimidation: {
+      intimidation?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -302,7 +303,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      performance: {
+      performance?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -310,7 +311,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      persuasion: {
+      persuasion?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -318,7 +319,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      acrobatics: {
+      acrobatics?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -326,7 +327,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      sleightOfHand: {
+      sleightOfHand?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -334,7 +335,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      stealth: {
+      stealth?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -342,7 +343,7 @@ export interface FifthEditionCharacter {
         advantage?: boolean;
         disadvantage?: boolean;
       };
-      athletics: {
+      athletics?: {
         halfProficient?: boolean;
         proficient?: boolean;
         expertise?: boolean;
@@ -353,34 +354,34 @@ export interface FifthEditionCharacter {
     };
   };
   combat: {
-    health: {
+    health?: {
       currentHitPoints?: number;
       maxHitPoints?: number;
       temporaryHitPoints?: number;
-      hitDice: {
+      hitDice?: {
         dieType?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         currentHitDice?: number;
         id?: string;
       }[];
-      deathSaves: {
+      deathSaves?: {
         deathSavesSuccesses?: number;
         deathSavesFailures?: number;
       };
     };
-    proficiency: {
+    proficiency?: {
       castingAbility?: 'intelligence' | 'wisdom' | 'charisma' | 'strength' | 'dexterity' | 'constitution';
       proficiencyBonus?: number;
       attackBonus?: number;
       saveDC?: number;
       id?: string;
     }[];
-    spellSlots: {
+    spellSlots?: {
       spellSlotLevel: 'cantrip' | '1st' | '2nd' | '3rd' | '4th' | '5th' | '6th' | '7th' | '8th' | '9th';
       currentSpellSlots?: number;
       maxSpellSlots?: number;
       id?: string;
     }[];
-    spells: {
+    spells?: {
       name?: string;
       detail?: string;
       summary?: string;
@@ -402,7 +403,7 @@ export interface FifthEditionCharacter {
         | 'other';
       id?: string;
     }[];
-    actions: {
+    actions?: {
       name?: string;
       detail?: string;
       summary?: string;
@@ -412,13 +413,13 @@ export interface FifthEditionCharacter {
       type?: 'melee' | 'ranged' | 'spell' | 'power' | 'special' | 'potion' | 'magic-item' | 'other';
       range?: string;
       proficient?: boolean;
-      attack: {
+      attack?: {
         abilityScore?: 'intelligence' | 'wisdom' | 'charisma' | 'dexterity' | 'strength' | 'constitution';
         miscModifier?: number;
         magicModifier?: number;
         attackBonus?: number;
       };
-      damage: {
+      damage?: {
         diceCount?: number;
         diceType?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         damageAbilityScore?: 'intelligence' | 'wisdom' | 'charisma' | 'dexterity' | 'strength' | 'constitution';
@@ -443,7 +444,7 @@ export interface FifthEditionCharacter {
       };
       id?: string;
     }[];
-    defenses: {
+    defenses?: {
       defenseType?: 'heavy-armor' | 'medium-armor' | 'light-armor' | 'natural-armor' | 'shield' | 'misc';
       base?: number;
       bonus?: number;
@@ -451,7 +452,7 @@ export interface FifthEditionCharacter {
       magicalBonus?: number;
       id?: string;
     }[];
-    abilities: {
+    abilities?: {
       name?: string;
       detail?: string;
       summary?: string;
@@ -460,20 +461,23 @@ export interface FifthEditionCharacter {
       }[];
       id?: string;
     }[];
-    feats: {
-      featName?: string;
-      featSummary?: string;
-      featDescription?: string;
+    feats?: {
+      name?: string;
+      detail?: string;
+      summary?: string;
+      description?: {
+        [k: string]: unknown;
+      }[];
       id?: string;
     }[];
   };
-  money: {
+  money?: {
     platinum?: number;
     gold?: number;
     silver?: number;
     copper?: number;
   };
-  equipment: {
+  equipment?: {
     name?: string;
     summary?: string;
     description?: {
@@ -486,7 +490,7 @@ export interface FifthEditionCharacter {
     value?: number;
     id?: string;
   }[];
-  statusEffects: {
+  statusEffects?: {
     statusEffect?:
       | 'blinded'
       | 'charmed'
@@ -507,7 +511,7 @@ export interface FifthEditionCharacter {
       | 'other';
     id?: string;
   }[];
-  trackables: {
+  trackables?: {
     name?: string;
     detail?: string;
     summary?: string;
@@ -521,9 +525,9 @@ export interface FifthEditionCharacter {
     resetsOnLongRest?: boolean;
     id?: string;
   }[];
-  journalChapters: {
+  journalChapters?: {
     name?: string;
-    journalEntries: {
+    journalEntries?: {
       pictures?: string[] | Media[];
       name?: string;
       detail?: string;
@@ -546,8 +550,8 @@ export interface Media {
   filesize?: number;
   width?: number;
   height?: number;
-  sizes: {
-    thumbnail: {
+  sizes?: {
+    thumbnail?: {
       url?: string;
       width?: number;
       height?: number;
@@ -555,7 +559,7 @@ export interface Media {
       filesize?: number;
       filename?: string;
     };
-    card: {
+    card?: {
       url?: string;
       width?: number;
       height?: number;
@@ -563,7 +567,7 @@ export interface Media {
       filesize?: number;
       filename?: string;
     };
-    tablet: {
+    tablet?: {
       url?: string;
       width?: number;
       height?: number;
@@ -581,38 +585,38 @@ export interface KidsOnBroomsCharacter {
   pictures?: string[] | Media[];
   adversityTokens?: number;
   stats: {
-    stats: {
-      fight: {
+    stats?: {
+      fight?: {
         fightDiceType: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         fightStat?: number;
         fightMagicDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         fightCommonSenseDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
       };
-      flight: {
+      flight?: {
         flightDiceType: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         flightStat?: number;
         flightMagicDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         flightCommonSenseDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
       };
-      brains: {
+      brains?: {
         brainsDiceType: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         brainsStat?: number;
         brainsMagicDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         brainsCommonSenseDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
       };
-      brawn: {
+      brawn?: {
         brawnDiceType: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         brawnStat?: number;
         brawnMagicDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         brawnCommonSenseDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
       };
-      charm: {
+      charm?: {
         charmDiceType: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         charmStat?: number;
         charmMagicDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         charmCommonSenseDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
       };
-      grit: {
+      grit?: {
         gritDiceType: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
         gritStat?: number;
         gritMagicDie?: 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20';
@@ -639,7 +643,7 @@ export interface KidsOnBroomsCharacter {
     animalFamiliar?: string;
   };
   schoolBag: {
-    items: {
+    items?: {
       item?: string;
       quantity?: number;
       id?: string;

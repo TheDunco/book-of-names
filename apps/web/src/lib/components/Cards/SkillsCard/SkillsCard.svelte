@@ -6,7 +6,7 @@
 	export let character: FifthEditionCharacter;
 	export let delay: number;
 
-	const skills = character.AbilityScoresAndSkills.skills;
+	const skills = character.AbilityScoresAndSkills.skills ?? {};
 </script>
 
 <Card title="Skills" {delay}>
