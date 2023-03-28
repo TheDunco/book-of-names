@@ -17,7 +17,7 @@
 </svelte:head>
 
 <Header />
-<div class="mt-24 py-8">
+<div class="mt-24 py-8 transition-gpu">
 	<slot />
 </div>
 

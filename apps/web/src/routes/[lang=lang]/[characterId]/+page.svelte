@@ -10,6 +10,7 @@
 	import type { FifthEditionCharacter } from '../../../../../../packages/types/payload-types';
 	import FeatsCard from '$lib/components/Cards/FeatsCard.svelte';
 	import AbilitiesCard from '$lib/components/Cards/AbilitiesCard.svelte';
+	import FlipCard from '$lib/components/Shared/FlipCard.svelte';
 	const delayFactor = 30;
 
 	export let data;
@@ -29,6 +30,10 @@
 	class="mx-auto max-w-7xl px-4 transition-all duration-300 ease-in-out md:px-6 lg:grid lg:grid-cols-2 xl:px-0"
 >
 	<GeneralSummaryCard {character} delay={delayFactor} />
+	<FlipCard>
+		<VisualAppearanceCard slot="front" {character} delay={2 * delayFactor} />
+		<BackgroundAndClassCard slot="back" {character} delay={3 * delayFactor} />
+	</FlipCard>
 	<VisualAppearanceCard {character} delay={2 * delayFactor} />
 	<BackgroundAndClassCard {character} delay={3 * delayFactor} />
 	<AbilityScoresCard {character} delay={4 * delayFactor} />
