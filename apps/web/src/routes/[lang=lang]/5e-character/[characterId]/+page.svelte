@@ -7,7 +7,7 @@
 	import VisualAppearanceCard from '$lib/components/Cards/VisualAppearanceCard.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import SpellsCard from '$lib/components/Cards/SpellsCard.svelte';
-	import type { FifthEditionCharacter } from '../../../../../../packages/types/payload-types';
+	import type { FifthEditionCharacter } from '../../../../../../../packages/types/payload-types';
 	import FeatsCard from '$lib/components/Cards/FeatsCard.svelte';
 	import AbilitiesCard from '$lib/components/Cards/AbilitiesCard.svelte';
 	const delayFactor = 30;
@@ -17,12 +17,12 @@
 	const character: FifthEditionCharacter = data.props?.character;
 
 	const showSpells =
-		character.combat.spells?.length > 0 ??
-		(false || character.combat.spellSlots?.length > 0) ??
+		character.combat.spells!.length > 0 ??
+		(false || character.combat.spellSlots!.length > 0) ??
 		false;
-	const showJournal = character.journalChapters?.length > 0 ?? false;
-	const showFeats = character.combat.feats?.length > 0 ?? false;
-	const showAbilities = character.combat.abilities?.length > 0 ?? false;
+	const showJournal = character.journalChapters!.length > 0 ?? false;
+	const showFeats = character.combat.feats!.length > 0 ?? false;
+	const showAbilities = character.combat.abilities!.length > 0 ?? false;
 </script>
 
 <div

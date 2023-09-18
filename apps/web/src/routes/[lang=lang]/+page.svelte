@@ -9,7 +9,7 @@
 </script>
 
 <h1
-	class="bold mb-6 max-w-sm mx-auto cursor-default text-center font-cuprum text-6xl text-c-gold hover:-skew-x-2 hover:before:content-['['] hover:after:content-[']']"
+	class="bold font-cuprum text-c-gold mx-auto mb-6 max-w-sm cursor-default text-center text-6xl hover:-skew-x-2 hover:before:content-['['] hover:after:content-[']']"
 	on:click={() => {
 		window.location.reload();
 	}}
@@ -27,8 +27,8 @@
 >
 	{#each characters as char, i}
 		<a
-			href={`/en/${char.id}`}
-			class="m-4 rounded-standard h-fit border-c-gold transition-[ring-width_0.1s_ease_in_out] hover:ring hover:ring-c-gold hover:drop-shadow-lg"
+			href={`/en/5e-character/${char.id}`}
+			class="rounded-standard border-c-gold hover:ring-c-gold m-4 h-fit transition-[ring-width_0.1s_ease_in_out] hover:ring hover:drop-shadow-lg"
 		>
 			<GeneralSummaryCard detail={false} removeMargin={true} delay={i * 15} character={char} />
 		</a>
