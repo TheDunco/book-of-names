@@ -5,6 +5,7 @@
 	import { createEditor } from 'slate';
 	import { toInitialCase } from '$lib/utils';
 	import clsx from 'clsx';
+	import { enhance } from '$app/forms';
 	const editor = withSvelte(createEditor());
 
 	export let fade = false;
@@ -18,7 +19,7 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<span
 		slot="trigger"
-		class={clsx('inline-flex hover:opacity-75 flex-wrap break-words py-1 text-sm cursor-pointer', {
+		class={clsx('inline-flex cursor-pointer flex-wrap break-words py-1 text-sm hover:opacity-75', {
 			'opacity-30': fade
 		})}
 	>
@@ -37,8 +38,8 @@
 			<p class="text-c-caption-gray">{NSD?.detail ? '\xa0' : ' - '}{NSD.summary}</p>
 		{/if}
 	</span>
-	<div slot="content">
-		<div class="inline-flex flex-wrap text-2xl mb-5">
+	<form slot="content" method="POST" use:enhance>
+		<span class="mb-5 inline-flex flex-wrap text-2xl">
 			{#if NSD?.name}
 				<h4 class="mr-1">{NSD.name}</h4>
 			{/if}
@@ -53,13 +54,24 @@
 			{#if NSD?.summary}
 				<p class="text-c-caption-gray">{NSD?.detail ? '\xa0' : '\xa0-\xa0'}{NSD.summary}</p>
 			{/if}
-		</div>
-		<div class="border-l-2 border-c-gold pl-3">
+		</span>
+		<div class="border-c-gold border-l-2 pl-3">
 			{#if NSD?.description}
 				<Slate {editor} bind:value>
 					<Editable placeholder="Enter some plain text..." />
 				</Slate>
 			{/if}
 		</div>
-	</div>
+		<button
+			formaction="?/NSD"
+			class="hover:bg-c-gold border-c-background-light hover:shadow-hover mt-5 rounded-md border-2 p-2 hover:border-transparent"
+		>
+			Save
+		</button>
+		<button
+			class="hover:bg-c-red border-c-background-light hover:shadow-hover mt-5 rounded-md border-2 p-2 hover:border-transparent hover:bg-opacity-30"
+		>
+			Cancel
+		</button>
+	</form>
 </Modal>
